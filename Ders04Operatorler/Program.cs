@@ -34,8 +34,8 @@ namespace Ders04Operatorler
 
             Console.WriteLine("2- Atama Operatörleri (=,+=,-=,*=,/=,%=)"); //
 
-            Console.WriteLine(a += b);
             Console.WriteLine(a = a + b);
+            Console.WriteLine(a += b);
             Console.WriteLine(a -= b);
             Console.WriteLine(a *= b);
             Console.WriteLine(a /= b);
@@ -53,9 +53,9 @@ namespace Ders04Operatorler
             Console.WriteLine((a == b) ? "a b ye eşit" : "a b ye eşit değil");
 
             //Mantıksal Operatörler
-            Console.WriteLine((5 > 3) && (4 > 5)); //a b den büyük mü VE a c den büyük mü
+            Console.WriteLine((5 > 3) && (4 > 5)); // && Ve operatörü
 
-            Console.WriteLine((5 > 3) || (5 > 7));//a b den büyük mü VEYA a c den büyük mü
+            Console.WriteLine((5 > 3) || (5 > 7)); // || Veya Operatörü (altgr + <)
 
             Console.WriteLine(!(5 > 3));
         }

@@ -14,6 +14,7 @@ namespace Ders06Donguler
             //Console.WriteLine("5");
 
             /*Console.WriteLine("For Döngüsü");
+             * 
             for (int i = 0; i < 10; i++)//i değişkeni oluştur ve 0 değerini ata; i 10 dan küçük olduğu sürece dön; her dönüşte i yi 1 artır i++ ile
             {
                 Console.WriteLine("i değişkeninin değeri {0}", i);
