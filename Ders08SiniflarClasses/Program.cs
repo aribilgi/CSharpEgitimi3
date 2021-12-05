@@ -30,6 +30,12 @@ namespace Ders08SiniflarClasses
             };
             Console.WriteLine($"Kurs Bilgileri : \n Eğitim Adı : {kurs.EgitimAdi} \n Kapı No : {kurs.KapiNo} \n Kurs Günleri : {kurs.Gunleri} \n Sınıf Mevcudu : {kurs.SinifMevcut} \n Kurs Adı : {kurs.KursAdi}");
 
+            SiniftaMetotKullanimi siniftaMetotKullanimi = new();
+            siniftaMetotKullanimi.ToplamaYap();
+
+            Console.WriteLine(SiniftaMetotKullanimi.StatikDegisken); //Sınıflarda static bir değişken veya metot kullanırsak sınıftan new ile örnek almadan direk SınıfAdı.Değişken-MetotAdi şeklinde kullanabiliriz
+            SiniftaMetotKullanimi.ToplamaYap(10, 8); //static olarak tanımladığımız toplamayap metodunu da sınıfadı.metotadı şeklinde direk çağırabiliriz new lemeye gerek olmadan
+
         }
     }
 
