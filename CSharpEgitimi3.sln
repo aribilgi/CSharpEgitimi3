@@ -23,13 +23,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ders09ErisimBelirleyiciler"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ders10OzgenlerProperties", "Ders10OzgenlerProperties\Ders10OzgenlerProperties.csproj", "{EACB37E1-A3E6-436F-AD65-742F7BA259D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ders11StructYapilar", "Ders11StructYapilar\Ders11StructYapilar.csproj", "{A87F8B1F-DC22-470F-926D-5C2D515F7198}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ders11StructYapilar", "Ders11StructYapilar\Ders11StructYapilar.csproj", "{A87F8B1F-DC22-470F-926D-5C2D515F7198}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ders12StringSinifi", "Ders12StringSinifi\Ders12StringSinifi.csproj", "{4F4DB24E-D20F-4D8B-8769-218564732157}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ders12StringSinifi", "Ders12StringSinifi\Ders12StringSinifi.csproj", "{4F4DB24E-D20F-4D8B-8769-218564732157}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ders13Enumlar", "Ders13Enumlar\Ders13Enumlar.csproj", "{B2DE6975-C5E8-4CF5-B09D-9CEAFAC55016}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ders13Enumlar", "Ders13Enumlar\Ders13Enumlar.csproj", "{B2DE6975-C5E8-4CF5-B09D-9CEAFAC55016}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ders14KalitimInheritance", "Ders14KalitimInheritance\Ders14KalitimInheritance.csproj", "{F28E0EDF-C193-4091-A139-CC625CDEFC7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ders14KalitimInheritance", "Ders14KalitimInheritance\Ders14KalitimInheritance.csproj", "{F28E0EDF-C193-4091-A139-CC625CDEFC7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ders15KapsullemeEncapsulation", "Ders15KapsullemeEncapsulation\Ders15KapsullemeEncapsulation.csproj", "{F49C0C4B-D1BB-4972-B987-648B7EFC188F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ders16InterfacesArayuzler", "Ders16InterfacesArayuzler\Ders16InterfacesArayuzler.csproj", "{3FF25030-290F-4BBF-BF5E-683392406381}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ders17AbstractClasses", "Ders17AbstractClasses\Ders17AbstractClasses.csproj", "{35D60AA8-C649-449D-B9DD-263AB24B8B80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ders18CollectionsKoleksiyonlar", "Ders18CollectionsKoleksiyonlar\Ders18CollectionsKoleksiyonlar.csproj", "{499F2291-A327-492F-A2EF-451180CD26F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +101,22 @@ Global
 		{F28E0EDF-C193-4091-A139-CC625CDEFC7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F28E0EDF-C193-4091-A139-CC625CDEFC7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F28E0EDF-C193-4091-A139-CC625CDEFC7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F49C0C4B-D1BB-4972-B987-648B7EFC188F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F49C0C4B-D1BB-4972-B987-648B7EFC188F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F49C0C4B-D1BB-4972-B987-648B7EFC188F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F49C0C4B-D1BB-4972-B987-648B7EFC188F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FF25030-290F-4BBF-BF5E-683392406381}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FF25030-290F-4BBF-BF5E-683392406381}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FF25030-290F-4BBF-BF5E-683392406381}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FF25030-290F-4BBF-BF5E-683392406381}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35D60AA8-C649-449D-B9DD-263AB24B8B80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35D60AA8-C649-449D-B9DD-263AB24B8B80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35D60AA8-C649-449D-B9DD-263AB24B8B80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35D60AA8-C649-449D-B9DD-263AB24B8B80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{499F2291-A327-492F-A2EF-451180CD26F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{499F2291-A327-492F-A2EF-451180CD26F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{499F2291-A327-492F-A2EF-451180CD26F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{499F2291-A327-492F-A2EF-451180CD26F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
