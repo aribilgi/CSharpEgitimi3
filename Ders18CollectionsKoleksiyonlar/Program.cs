@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Collections.Specialized;
 
 namespace Ders18CollectionsKoleksiyonlar
@@ -13,7 +14,12 @@ namespace Ders18CollectionsKoleksiyonlar
             //Ornek2();
             //Ornek3();
             //Ornek4();
-            Ornek5();
+            //Ornek5();
+            //Ornek6();
+            //Ornek7();
+            //Ornek8();
+            //Ornek9();
+            ListKullanimi();
         }
         static void Ornek1()
         {
@@ -98,6 +104,136 @@ namespace Ders18CollectionsKoleksiyonlar
             {
                 Console.WriteLine(item);
             }
+        }
+        static void Ornek6()
+        {
+            //Stack sınıfı programlamada LIFO (last in first out) son giren ilk çıkar diye bilinen önemli bir yapıdır
+            Stack stekobje = new Stack();
+            stekobje.Push("Çankırı");//Stack e bir öğe eklemek için push metodu kullanılır
+            stekobje.Push("İstanbul");
+            stekobje.Push("Angara");
+            stekobje.Push("Sivas");
+            stekobje.Push("Balıkesir");
+
+            while (stekobje.Count > 0)
+            {
+                Console.WriteLine(stekobje.Pop());//Stack in üstünden bir öğe çekmek için pop metodu kullanılır
+            }
+        }
+        static void Ornek7()
+        {
+            Queue queue = new Queue();//Queue sınıfı programlamada FIFO(First in first out, ilk giren ilk çıkar) diye bilinen bir yapısıdır.
+            queue.Enqueue("Lale");
+            queue.Enqueue("Gül");
+            queue.Enqueue("Sümbül");
+            queue.Enqueue("Menekşe");
+            queue.Enqueue("Çiğdem");
+            while (queue.Count > 0) Console.WriteLine(queue.Dequeue());
+        }
+        static void Ornek8()
+        {
+            //HashTable sınıfı object tiplerin hızla depolanması ve depodan hızla çekilmesi için kullanılan bir yöntemdir
+            Hashtable hst = new();
+            hst.Add(1, "Adana");
+            hst.Add(2, "Adıyaman");
+            hst.Add(3, "Afyon");
+            hst.Add(4, "İztanbul");
+            hst.Add(5, "Amasya");
+            Console.WriteLine("Anahtarlar : ");
+            foreach (var item in hst.Keys)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine("Aramak İçin Anahtar Girin : ");
+            int n = int.Parse(Console.ReadLine());
+            Console.WriteLine(hst[n]);
+        }
+        static void Ornek9()
+        {
+            Dictionary<string, string> dictionary = new();
+            dictionary.Add("book", "kitap");
+            dictionary.Add("table", "masa");
+            dictionary.Add("computer", "bilgisayar");
+            Console.WriteLine(dictionary["table"]);
+            Dictionary<int, string> keyValues = new();
+            keyValues.Add(1, "Adana");
+            keyValues.Add(18, "Çankırı");
+            keyValues.Add(34, "İstanbul");
+            Console.WriteLine(keyValues[18]);
+            foreach (var item in dictionary)
+            {
+                Console.WriteLine(item.Value);
+            }
+            Console.WriteLine(dictionary.ContainsKey("gozluk"));
+            Console.WriteLine(dictionary.ContainsKey("table"));
+        }
+        class User
+        {
+            public int Id { get; set; }
+            public string FirstName { get; set; }
+            public string LastName { get; set; }
+        }
+        static void ListKullanimi()
+        {
+            List<string> sehirler = new(); // veri tipi string olan sehirler isminde liste oluşturduk
+            sehirler.Add("Ankara");
+            sehirler.Add("İstanbul");
+            sehirler.Add("Çankırı");
+
+            //Console.WriteLine(sehirler.Contains("Adana")); //sehirler listesi adana yı içeriyor mu?
+            //Console.WriteLine(sehirler.Contains("İstanbul"));
+            foreach (var sehir in sehirler)
+            {
+                Console.WriteLine(sehir);
+            }
+
+            Console.WriteLine();
+            List<User> users = new();
+
+            users.Add(new User { Id = 1, FirstName = "Mesut" });
+            users.Add(new User { Id = 2, FirstName = "Mahmut" });
+
+            List<User> kullanicilar = new()
+            {
+                new User {Id = 1, FirstName = "Murat"},
+                new User {Id = 2, FirstName = "Ömer"}
+            };
+
+            var yeniKullanici = new User
+            {
+                Id = 3,
+                FirstName = "Pusat"
+            };
+
+            Console.WriteLine("kullanicilar listesinde yeniKullanici var mı : " + kullanicilar.Contains(yeniKullanici));
+            kullanicilar.Add(yeniKullanici); // kullanicilar listesine yeniKullanici yı ekle
+            Console.WriteLine("kullanicilar listesinde yeniKullanici var mı : " + kullanicilar.Contains(yeniKullanici));
+            // AddRange metoduyla çoklu kayıt ekleyebiliriz
+            kullanicilar.AddRange(new User[2]
+            {
+                new User {Id = 4, FirstName = "Murat", LastName = "Yılmaz"},
+                new User {Id = 5, FirstName = "Yunus", LastName = "Bektaş"}
+            });
+
+            kullanicilar.AddRange(users); // Bir listeye bir başka listeyi ekleyebiliriz
+
+            Console.WriteLine();
+
+            var index = kullanicilar.IndexOf(yeniKullanici);//kullanicilar listesinde yeniKullanici nesnesinin kaçıncı sırada(index olarak) geçtiğini yakalayıp index değişkenine atadık
+            Console.WriteLine("yeniKullanici Index No : {0}", index);
+
+            kullanicilar.Add(yeniKullanici);
+            var index2 = kullanicilar.LastIndexOf(yeniKullanici);
+            Console.WriteLine("yeniKullanici Son Index No : {0}", index2);
+
+            kullanicilar.Insert(2, yeniKullanici); // Insert metodu listede istediğim sıraya ekleme yapmamızı sağlar
+
+            Console.WriteLine();
+
+            kullanicilar.Remove(yeniKullanici); // Remove metodu ile listeden eleman silinir
+
+            var count = kullanicilar.Count; // Count metodu listedeki eleman sayısını verir
+            Console.WriteLine("Listedeki kullanıcı sayısı : {0}", count);
         }
     }
 }

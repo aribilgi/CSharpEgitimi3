@@ -31,13 +31,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ders13Enumlar", "Ders13Enum
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ders14KalitimInheritance", "Ders14KalitimInheritance\Ders14KalitimInheritance.csproj", "{F28E0EDF-C193-4091-A139-CC625CDEFC7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ders15KapsullemeEncapsulation", "Ders15KapsullemeEncapsulation\Ders15KapsullemeEncapsulation.csproj", "{F49C0C4B-D1BB-4972-B987-648B7EFC188F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ders15KapsullemeEncapsulation", "Ders15KapsullemeEncapsulation\Ders15KapsullemeEncapsulation.csproj", "{F49C0C4B-D1BB-4972-B987-648B7EFC188F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ders16InterfacesArayuzler", "Ders16InterfacesArayuzler\Ders16InterfacesArayuzler.csproj", "{3FF25030-290F-4BBF-BF5E-683392406381}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ders16InterfacesArayuzler", "Ders16InterfacesArayuzler\Ders16InterfacesArayuzler.csproj", "{3FF25030-290F-4BBF-BF5E-683392406381}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ders17AbstractClasses", "Ders17AbstractClasses\Ders17AbstractClasses.csproj", "{35D60AA8-C649-449D-B9DD-263AB24B8B80}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ders17AbstractClasses", "Ders17AbstractClasses\Ders17AbstractClasses.csproj", "{35D60AA8-C649-449D-B9DD-263AB24B8B80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ders18CollectionsKoleksiyonlar", "Ders18CollectionsKoleksiyonlar\Ders18CollectionsKoleksiyonlar.csproj", "{499F2291-A327-492F-A2EF-451180CD26F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ders18CollectionsKoleksiyonlar", "Ders18CollectionsKoleksiyonlar\Ders18CollectionsKoleksiyonlar.csproj", "{499F2291-A327-492F-A2EF-451180CD26F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ders19Events", "Ders19Events\Ders19Events.csproj", "{48BA0419-4819-4C11-B631-5FF3A3AD8805}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ders20DelegelerDelegates", "Ders20DelegelerDelegates\Ders20DelegelerDelegates.csproj", "{CAF100FF-2F28-4D53-93D0-4883CEF93B2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ders21Generics", "Ders21Generics\Ders21Generics.csproj", "{0963A9A3-E080-4347-802A-48FEC6DC52FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -117,6 +123,18 @@ Global
 		{499F2291-A327-492F-A2EF-451180CD26F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{499F2291-A327-492F-A2EF-451180CD26F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{499F2291-A327-492F-A2EF-451180CD26F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48BA0419-4819-4C11-B631-5FF3A3AD8805}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48BA0419-4819-4C11-B631-5FF3A3AD8805}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48BA0419-4819-4C11-B631-5FF3A3AD8805}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48BA0419-4819-4C11-B631-5FF3A3AD8805}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAF100FF-2F28-4D53-93D0-4883CEF93B2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAF100FF-2F28-4D53-93D0-4883CEF93B2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAF100FF-2F28-4D53-93D0-4883CEF93B2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAF100FF-2F28-4D53-93D0-4883CEF93B2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0963A9A3-E080-4347-802A-48FEC6DC52FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0963A9A3-E080-4347-802A-48FEC6DC52FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0963A9A3-E080-4347-802A-48FEC6DC52FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0963A9A3-E080-4347-802A-48FEC6DC52FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
