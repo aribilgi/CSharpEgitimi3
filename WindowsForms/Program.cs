@@ -16,7 +16,7 @@ namespace WindowsForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form5()); // Starta basınca hangi form açılsın
+            Application.Run(new Form14()); // Starta basınca hangi form açılsın
         }
     }
 }
