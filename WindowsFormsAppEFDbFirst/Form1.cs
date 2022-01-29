@@ -16,7 +16,7 @@ namespace WindowsFormsAppEFDbFirst
         {
             InitializeComponent();
         }
-
+        UrunYonetimiAdoNetEntities UrunYonetimi = new UrunYonetimiAdoNetEntities();
         private void Form1_Load(object sender, EventArgs e)
         {
             //Entity Framework
@@ -29,6 +29,7 @@ namespace WindowsFormsAppEFDbFirst
              * Code First (Yeni Veritabanı Kod Yazarak)
              * Code First (Var Olan Veritabanını Kullanma)
              */
+            dataGridView1.DataSource = UrunYonetimi.Products.ToList();
         }
     }
 }

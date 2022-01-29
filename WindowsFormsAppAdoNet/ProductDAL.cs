@@ -66,5 +66,30 @@ namespace WindowsFormsAppAdoNet
             return sonuc;
         }
 
+        public int Update(Product product)
+        {
+            ConnectionKontrol();
+            SqlCommand command = new SqlCommand("Update Products set UrunAdi=@Adi, UrunFiyati=@UrunFiyati, StokMiktari=@StokMiktari where Id=@id", connection);
+            command.Parameters.AddWithValue("@Adi", product.UrunAdi);
+            command.Parameters.AddWithValue("@UrunFiyati", product.UrunFiyati);
+            command.Parameters.AddWithValue("@StokMiktari", product.StokMiktari);
+            command.Parameters.AddWithValue("@id", product.Id);
+            var sonuc = command.ExecuteNonQuery(); // sorguyu çalıştır
+            command.Dispose();
+            connection.Close();
+            return sonuc;
+        }
+
+        public int Delete(int id)
+        {
+            ConnectionKontrol();
+            SqlCommand command = new SqlCommand("Delete from Products where Id=@id", connection);
+            command.Parameters.AddWithValue("@id", id);
+            var sonuc = command.ExecuteNonQuery(); // sorguyu çalıştır
+            command.Dispose();
+            connection.Close();
+            return sonuc;
+        }
+
     }
 }

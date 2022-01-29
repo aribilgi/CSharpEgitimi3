@@ -46,5 +46,41 @@ namespace WindowsFormsAppAdoNet
                 MessageBox.Show("Kayıt Eklendi!");
             }
         }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtUrunAdi.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            txtUrunFiyati.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            txtStokMiktari.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+        }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            var sonuc = productDAL.Update(new Product
+            {
+                Id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value),
+                StokMiktari = Convert.ToInt32(txtStokMiktari.Text),
+                UrunAdi = txtUrunAdi.Text,
+                UrunFiyati = Convert.ToDecimal(txtUrunFiyati.Text)
+            });
+            if (sonuc > 0)
+            {
+                dataGridView1.DataSource = productDAL.GetAllDataTable();
+                MessageBox.Show("Kayıt Güncellendi!");
+            }
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Silmek İstediğinize Emin Misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                var sonuc = productDAL.Delete(Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value));
+                if (sonuc > 0)
+                {
+                    dataGridView1.DataSource = productDAL.GetAllDataTable();
+                    MessageBox.Show("Kayıt Silindi!");
+                }
+            }
+        }
     }
 }
