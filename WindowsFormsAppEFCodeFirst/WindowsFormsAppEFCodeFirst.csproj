@@ -66,9 +66,23 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form2Kategoriler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2Kategoriler.Designer.cs">
+      <DependentUpon>Form2Kategoriler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KategoriDAL.cs" />
+    <Compile Include="ProductDal.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UrunDbContext.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2Kategoriler.resx">
+      <DependentUpon>Form2Kategoriler.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

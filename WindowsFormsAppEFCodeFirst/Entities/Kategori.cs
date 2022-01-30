@@ -1,5 +1,8 @@
-﻿namespace WindowsFormsAppEFCodeFirst.Entities
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace WindowsFormsAppEFCodeFirst.Entities
 {
+    [Table("Kategoriler")] //Burası aşağıdaki class ın veritabanındaki hangi tablo ile ilişkilendirileceğini belirler
     public class Kategori
     {
         public int Id { get; set; }
