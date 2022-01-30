@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsAppAdoNet
+﻿namespace WindowsFormsAppEFCodeFirst.Entities
 {
     public class Kullanici
     {
