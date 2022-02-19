@@ -68,6 +68,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SqlKodlari", "SqlKodlari", 
 		D:\EĞİTMEN YEDEK\Yazilim\SQL-Ders-8-t-sql-stored-procedure-kullanimi.sql = D:\EĞİTMEN YEDEK\Yazilim\SQL-Ders-8-t-sql-stored-procedure-kullanimi.sql
 		D:\EĞİTMEN YEDEK\Yazilim\SQL-Ders-9-Commit-ve-Rollback.sql = D:\EĞİTMEN YEDEK\Yazilim\SQL-Ders-9-Commit-ve-Rollback.sql
 		D:\EĞİTMEN YEDEK\Yazilim\SQLDers-1.sql = D:\EĞİTMEN YEDEK\Yazilim\SQLDers-1.sql
+		..\..\..\Downloads\startbootstrap-sb-admin-gh-pages\startbootstrap-sb-admin-gh-pages.zip = ..\..\..\Downloads\startbootstrap-sb-admin-gh-pages\startbootstrap-sb-admin-gh-pages.zip
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsAppEFDbFirst", "WindowsFormsAppEFDbFirst\WindowsFormsAppEFDbFirst.csproj", "{2837CF60-A599-415D-9C46-2B04D3857E96}"
