@@ -67,7 +67,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CSSEgitimi\Css01Giris.html" />
     <Content Include="Global.asax" />
+    <Content Include="HariciCSS.css" />
     <Content Include="index.html" />
     <Content Include="Resimler\cropped-logo-200x37-1.png" />
     <Content Include="Resimler\masa.jpg" />

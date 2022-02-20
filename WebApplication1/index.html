@@ -59,9 +59,9 @@
         <tr>
             <td>Burası bir tablodur</td>
             <td>
-                table kodu tablonun başlangıç ve bitişini belirler, 
-                tr kodu satır oluşturur, 
-                td kodu sütun oluşturur. 
+                table kodu tablonun başlangıç ve bitişini belirler,
+                tr kodu satır oluşturur,
+                td kodu sütun oluşturur.
                 Bu tablo 1 satır ve 2 sütundan oluşur.
             </td>
         </tr>
@@ -73,6 +73,187 @@
             <td>1 tane tr(satır) 2 tane td(sütun) var</td>
         </tr>
     </table>
+
+    <hr />
+
+    <table border="1">
+        <tr>
+            <td>2 satır 2 sütunlu tablo</td>
+        </tr>
+        <tr>
+            <td>Her satırda 1 sütun var</td>
+        </tr>
+    </table>
+
+    <hr />
+
+    <table border="1">
+        <tr>
+            <td>1. satır 1. sütun</td>
+            <td>1. satır 2. sütun</td>
+        </tr>
+        <tr>
+            <td>2. satır 1. sütun</td>
+            <td>2. satır 2. sütun</td>
+        </tr>
+    </table>
+
+    <hr />
+
+    <table border="1">
+        <tr>
+            <td>1. satır 1. sütun</td>
+            <td>1. satır 2. sütun</td>
+            <td>1. satır 3. sütun</td>
+        </tr>
+        <tr>
+            <td>2. satır 1. sütun</td>
+            <td>2. satır 2. sütun</td>
+            <td>2. satır 3. sütun</td>
+        </tr>
+    </table>
+
+    <hr />
+
+    <h2>Tablolarda satır ve sütun birleştirme</h2>
+
+    <table border="1">
+        <caption>Tablo Başlığı</caption>
+        <tr>
+            <th>İsim</th>
+            <td>Aylin</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Telefon</th>
+            <td>0598</td>
+        </tr>
+        <tr>
+            <td>0123</td>
+        </tr>
+    </table>
+
+    <hr />
+
+    <table border="1">
+        <caption>Tabloda sütun birleştirme</caption>
+        <tr>
+            <td colspan="2">Bu sütun colspan="2" kodu sayesinde 2 sütunluk yer kaplar</td>
+        </tr>
+        <tr>
+            <td>2. satır 1. sütun</td>
+            <td>2. satır 2. sütun</td>
+        </tr>
+    </table>
+
+    <hr />
+
+
+    <i>Html i elementi ile italik yani yana yatık yazılar yazdırabiliriz</i>
+    <em>em elementi ile de yatık yazılar yazdırabiliriz</em>
+    <b>bold kalın yazı</b>
+    <strong>strong güçlü yazı</strong>
+
+    <h2>Html de <small>small</small> elementi ile bir yazıyı daha küçük gösterebiliriz</h2>
+
+    <mark>mark HTML öğesi işaretli veya vurgulanmış metni tanımlar</mark>
+
+    <ins>Html ins tagı</ins>
+
+
+    <p>sub HTML öğesi ile <sub>alt</sub> çıkıntılı metin tanımlarız</p>
+    <p>sup HTML öğesi <sup>üst yazı</sup> metnini tanımlar</p>
+
+    <h3>Html de liste elemanları kullanımı</h3>
+    <p>Sıralı ve sırasız liste olmak üzere 2 farklı liste kullanabiliriz</p>
+    <ul>
+        <li>Unordered HTML List</li>
+        <li>Sırasız liste oluşturmak için</li>
+        <li>ul ve li kullanabiliriz</li>
+        <li>Özellikle menülerde sık kullanılır</li>
+    </ul>
+
+    <ol>
+        <li>Ordered HTML List</li>
+        <li>Sıra numaralı liste kullanmak istersek</li>
+        <li>ol ve li kullanabiliriz</li>
+    </ol>
+
+    <h4>Bir diğer liste yöntemi de dl yani Description Lists dir. Açıklamalı listeler oluşturmada kullanılır</h4>
+    <dl>
+        <dt>Çay var </dt>
+        <dd>İçersen</dd>
+        <dt>Yol var</dt>
+        <dd>Gidersen</dd>
+    </dl>
+
+    <!-- Kullanıcı Girişi başlangıç -->
+    <fieldset>
+        <legend>Kullanıcı Girişi</legend>
+        <div>
+            <table>
+                <tr>
+                    <td>Kullanıcı Adı :</td>
+                    <td><input id="Text1" type="text" /></td>
+                </tr>
+                <tr>
+                    <td>Şifre :</td>
+                    <td><input id="Text2" type="text" /></td>
+                </tr>
+            </table>
+        </div>
+    </fieldset>
+    <!-- Kullanıcı Girişi bitiş -->
+    <!-- Html de yorum satırı oluşturma -->
+
+    <h2>Semantik html5 elementleri</h2>
+
+    <header>
+        <div>Logo</div>
+        <h1>Sayfa başlığımız</h1>
+        Html üst bölgesi için header elementi oluşturulur. Sayfadaki head kısmından farklı olarak bu bit html elementidir
+
+        <nav>
+            sayfadaki genel bağlantılar
+            <ul>
+                <li><a href="#">Anasayfa</a></li>
+                <li><a href="#">Hakkımızda</a></li>
+                <li><a href="#">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <article>
+        makale içerik alanımız
+    </article>
+
+    <section>
+        <h1>Bölüm başlığı</h1>
+        <p>
+            Bölüm açıklaması
+        </p>
+    </section>
+
+    <aside>
+        aside ile yan menü oluşturabiliriz
+        <ul>
+            <li>Ürünlerimiz</li>
+            <li>Hakkımızda</li>
+            <li>İletişim</li>
+        </ul>
+    </aside>
+
+    <figure>
+        <img src="" alt="resim1" />
+    </figure>
+
+    <footer>
+        Sayfanın en alt kısmı footer ile oluşturulur
+        <address>
+            Adres yazımları için
+            <br />
+            html address elementini kullanabiliriz
+        </address>
+    </footer>
 
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 </body>
