@@ -68,10 +68,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CSSEgitimi\Css01Giris.html" />
+    <Content Include="CSSEgitimi\Css02Arkaplanlar.html" />
+    <Content Include="CSSEgitimi\Css03MarginPadding.html" />
+    <Content Include="CSSEgitimi\Css04GenislikYukseklik.html" />
+    <Content Include="CSSEgitimi\Css05DisplayOzelligi.html" />
     <Content Include="Global.asax" />
     <Content Include="HariciCSS.css" />
     <Content Include="index.html" />
-    <Content Include="Resimler\cropped-logo-200x37-1.png" />
+    <Content Include="Resimler\logo.png" />
     <Content Include="Resimler\masa.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
