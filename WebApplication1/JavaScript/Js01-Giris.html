@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Js01-Giris</title>
+    <style>
+    </style>
+
+    <script>
+        //Javascript kodları script tag lerinin arasına yazılır
+        document.writeln("<h2>javascript ile yazı yazdırma</h2>");
+        document.writeln("<font color='red'><h2>javascript ile renkli yazı yazdırma</h2></font>");
+        document.write("<h3>Hava, Su, Toprak, Tahta</h3>");
+
+        //Tarayıcı Konsoluna yazdırma
+        console.log("Tarayıcı Konsoluna yazdırma");
+        console.log("Merhaba");
+
+        //Js ile ekrana mesaj verdirme
+        //window.alert("Yazılım Eğitimi \n Javascript bölümü");
+        //alert("Merhaba");
+
+        //Var ile değişken tanımlama
+        var fiyat, miktar, tutar, fiy, mik;
+
+        var x = 10, y = 5, z;
+        x = x + 3;
+
+        console.log(x);
+
+        //var ve let ile tanımlanan değişkenleri oluşturmadan console a yazma
+        //console.log(isim); //let ile hata yakalama
+        //console.log(soyisim);
+
+        //Let ile değişken tanımlama
+
+        let isim;
+        var soyisim;
+
+        isim = "Ali";
+        soyisim = "Veli";
+        console.log(isim + " " + soyisim);
+    </script>
+</head>
+<body>
+    <h1>Js Kütüphaneleri</h1>
+    <ul>
+        <li>Angular</li>
+        <li>React</li>
+        <li>Vue</li>
+        <li>Jquery</li>
+        <li>NodeJs; Angular, react ve vue gibi kütüphanelerin çalışmasını destekler</li>
+    </ul>
+
+    <div>
+        Javascript Kullanım Alanları
+        <br />
+        Front-end, back-end, Mobil uygulama, Masaüstü uygulama, Oyun, Makine öğrenmesi, Derin öğrenme ve Yapay zeka
+        <br />
+        <h2>Front End Kütüphaneleri</h2>
+        <div>
+            Angular, React, Vue Js
+        </div>
+        <h2>Back End</h2>
+        <p>
+            NodeJs
+        </p>
+        <h2>Mobil</h2>
+        <p>
+            React Native
+        </p>
+
+    </div>
+
+    <script>
+         //Javascript kodları script tag lerinin arasına yazılır
+         /*var fiyat, miktar, tutar, fiy, mik;
+         fiyat = window.prompt("fiyatı giriniz..", "0");
+         miktar = window.prompt("miktarı giriniz..", "0");
+         fiy = parseInt(fiyat);
+         mik = parseInt(miktar);
+         tutar = fiy * mik;
+         document.writeln("<h2>fiyat=" + fiyat + "</h2>");
+         document.writeln("<h2>miktar=" + miktar + "</h2>");
+         document.writeln("<h2>tutar=" + tutar + "</h2>");
+         */
+
+        //Javascript de sabitler (constant)
+        //const sabitDeger; //sabit tanımlamada sabitin değeri başlangıçta verilmek zorundadır!
+        const sabitDeger = "sabit Değer";
+        //sabitDeger = "yeniVeri"; //sabitlerin değeri sonradan değiştirilemez!
+
+        console.log(sabitDeger);
+    </script>
+</body>
+</html>

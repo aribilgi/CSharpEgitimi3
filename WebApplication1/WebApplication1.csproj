@@ -72,9 +72,16 @@
     <Content Include="CSSEgitimi\Css03MarginPadding.html" />
     <Content Include="CSSEgitimi\Css04GenislikYukseklik.html" />
     <Content Include="CSSEgitimi\Css05DisplayOzelligi.html" />
+    <Content Include="CSSEgitimi\Css06PositionOzelligi.html" />
+    <Content Include="CSSEgitimi\Css07IcerikTasmasi.html" />
+    <Content Include="CSSEgitimi\Css08FloatOzellgi.html" />
     <Content Include="Global.asax" />
     <Content Include="HariciCSS.css" />
     <Content Include="index.html" />
+    <Content Include="JavaScript\Js01-Giris.html" />
+    <Content Include="JavaScript\Js02-Matematiksel-Islemler.html" />
+    <Content Include="MiniSite\index.html" />
+    <Content Include="MiniSite\stil.css" />
     <Content Include="Resimler\logo.png" />
     <Content Include="Resimler\masa.jpg" />
     <Content Include="Web.config" />
