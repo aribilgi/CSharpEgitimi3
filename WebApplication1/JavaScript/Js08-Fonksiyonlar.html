@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Js08-Fonksiyonlar</title>
+    <script>
+        //Basit fonksiyon tanımlama
+        function f_yaz(string1) {
+            document.write("<h1>" + string1 + "</h1>");
+        }
+
+        f_yaz("Yazılım Eğitimi");
+        f_yaz("Html, Css, Js Eğitimi");
+
+        function renk(kod) {
+            document.bgColor = kod
+        }
+
+        //renk("blue");
+
+    </script>
+</head>
+<body>
+    <form>
+        <div>
+            <input id="Button1" type="button" value="Kırmızı" onclick="renk('red');" />
+        </div>
+        <div>
+            <input id="Button2" type="button" value="Mavi" onclick="renk('blue');" />
+        </div>
+        <div>
+            <input id="Button3" type="button" value="Yeşil" onclick="renk('green');" />
+        </div>
+        <div>
+            <input id="Button4" type="button" value="Sarı" onclick="renk('yellow');" />
+        </div>
+        <input id="Button5" type="button" value="Beyaz" onclick="renk('white');" />
+    </form>
+</body>
+</html>

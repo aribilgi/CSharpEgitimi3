@@ -80,6 +80,13 @@
     <Content Include="index.html" />
     <Content Include="JavaScript\Js01-Giris.html" />
     <Content Include="JavaScript\Js02-Matematiksel-Islemler.html" />
+    <Content Include="JavaScript\Js03-KararYapilari.html" />
+    <Content Include="JavaScript\Js04-Operatorler.html" />
+    <Content Include="JavaScript\Js05-Donguler.html" />
+    <Content Include="JavaScript\Js06-SwitchCase.html" />
+    <Content Include="JavaScript\Js07-Nesneler.html" />
+    <Content Include="JavaScript\Js08-Fonksiyonlar.html" />
+    <Content Include="JavaScript\Js09-Hazir-Nesneler.html" />
     <Content Include="MiniSite\index.html" />
     <Content Include="MiniSite\stil.css" />
     <Content Include="Resimler\logo.png" />
