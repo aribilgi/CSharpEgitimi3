@@ -78,6 +78,7 @@
     <Content Include="Global.asax" />
     <Content Include="HariciCSS.css" />
     <Content Include="index.html" />
+    <Content Include="JavaScript\jquery-3.6.0.min.js" />
     <Content Include="JavaScript\Js01-Giris.html" />
     <Content Include="JavaScript\Js02-Matematiksel-Islemler.html" />
     <Content Include="JavaScript\Js03-KararYapilari.html" />
@@ -87,6 +88,12 @@
     <Content Include="JavaScript\Js07-Nesneler.html" />
     <Content Include="JavaScript\Js08-Fonksiyonlar.html" />
     <Content Include="JavaScript\Js09-Hazir-Nesneler.html" />
+    <Content Include="JavaScript\Js10-HistoryNesnesi.html" />
+    <Content Include="JavaScript\Js11-StringNesnesi.html" />
+    <Content Include="JavaScript\Js12-Olaylar.html" />
+    <Content Include="JavaScript\Js13-Diziler.html" />
+    <Content Include="JavaScript\Js14-Seciciler.html" />
+    <Content Include="JavaScript\Js15-Jquery-Seciciler.html" />
     <Content Include="MiniSite\index.html" />
     <Content Include="MiniSite\stil.css" />
     <Content Include="Resimler\logo.png" />
