@@ -94,6 +94,7 @@
     <Content Include="JavaScript\Js13-Diziler.html" />
     <Content Include="JavaScript\Js14-Seciciler.html" />
     <Content Include="JavaScript\Js15-Jquery-Seciciler.html" />
+    <Content Include="JavaScript\Js16-Jquery-HTML.html" />
     <Content Include="MiniSite\index.html" />
     <Content Include="MiniSite\stil.css" />
     <Content Include="Resimler\logo.png" />
