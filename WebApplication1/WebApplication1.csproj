@@ -97,17 +97,29 @@
     <Content Include="JavaScript\Js16-Jquery-HTML.html" />
     <Content Include="JavaScript\Js17-jQueryCSS.html" />
     <Content Include="JavaScript\Js18-Jquery-Dom.html" />
+    <Content Include="JavaScript\Js19-Jquery-Efektler.html" />
+    <Content Include="JavaScript\Js20-Jquery-Ajax-Kullanimi.html" />
+    <Content Include="JavaScript\Js21-Jquery-Yukari-Cik-Uygulamasi.html" />
     <Content Include="MiniSite\index.html" />
     <Content Include="MiniSite\stil.css" />
     <Content Include="Resimler\logo.png" />
     <Content Include="Resimler\masa.jpg" />
+    <Content Include="TextFile1.txt" />
     <Content Include="Web.config" />
+    <Content Include="WebFormSayfasi.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebFormSayfasi.aspx.cs">
+      <DependentUpon>WebFormSayfasi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebFormSayfasi.aspx.designer.cs">
+      <DependentUpon>WebFormSayfasi.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

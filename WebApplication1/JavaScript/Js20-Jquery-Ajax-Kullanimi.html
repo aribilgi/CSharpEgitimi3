@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Js20-Jquery-Ajax-Kullanimi</title>
+    <script src="jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h2>Jquery Ajax Kullanımı</h2>
+
+    <form>
+        <h2>Burası form elementinin içi</h2>
+        Ürün adı :  <input id="Text1" type="text" />
+        <input id="Submit1" type="submit" value="Sayfayı sunucuya gönder" />
+    </form>
+
+    <p id="ajax"></p>
+    <input id="btn3" type="button" value="Ajax ile İçerik Yükle" />
+
+    <script>
+        $("#btn3").click(function () {
+            $.ajax({
+                url: "/TextFile1.txt", // url istek yapılacak adres, / kök dizinden başla demek
+                success: function (result) {
+                    $("#ajax").html(result);
+                },
+                error: function () {
+                    $("#ajax").html("hata oluştu");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
