@@ -1,0 +1,5 @@
+﻿Models klasörü MVC deki M harfine denk gelir ve projede kullanacağımız entity class larını barındırmak için kullanılır.
+
+Katmanlı mimaride Entities katmanı varsa models kullanılmayabilir.
+
+Models klasörü projede kullanılmak zorunda değildir.

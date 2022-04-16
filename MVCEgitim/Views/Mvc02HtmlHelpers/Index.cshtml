@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Mvc02 Html Helpers";
+}
+
+<h2>Mvc02 Html Helpers</h2>
+
+<p>
+    Mvc de Toolboxdaki web form komponentleri kullanılmıyor artık. <br />
+    Bunların yerine Ekranda html elementleri oluşturmak için Html Helpers denilen yapı kullanılıyor.
+</p>
+
+
+@Html.ActionLink("Anasayfa", "Index")
+ActionLink Çıktısı ekranda aşağıdaki gibi bir a elementi oluşturur.
+<br />
+<a href="/Mvc02HtmlHelpers">Anasayfa</a>
+
+<hr />
+
+<p>
+    Ayrı bir controllera yönlendirme yapmak istersek aşağıdaki gibi 3 parametre kullanmamız gerekir.
+</p>
+
+@Html.ActionLink("Hakkımızda", "About", "Home")
+ActionLink Çıktısı :
+<a href="/Home/About">Hakkımızda</a>
+<hr />

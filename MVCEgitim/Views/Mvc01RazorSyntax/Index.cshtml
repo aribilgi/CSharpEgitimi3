@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "Mvc Razor Syntax";
+
+    <h2>Mvc Razor Syntax</h2>
+
+    <h3>Değişken Tanımlama</h3>
+
+    string isim = "Asus"; // Değişken oluşturduk
+
+    @isim // Değişkeni ekrana yazdırma
+    <br />
+    <h4>@isim</h4>
+    // Değişkeni html elementiyle ekrana yazdırma
+
+    string[] adlar = new string[] { "Ali", "Veli", "Asus" };
+
+    foreach (var ad in adlar)
+    {
+        <text>İsim : </text> @(ad + " ")
+        <strong>@ad</strong>
+        <hr />
+    }
+
+    <h3>For Döngüsü</h3>
+
+    for (int i = 0; i < 5; i++)
+    {
+        <text>İ nin değeri :</text> @i
+        <hr />
+    }
+}
+
+<h4>@isim</h4>
