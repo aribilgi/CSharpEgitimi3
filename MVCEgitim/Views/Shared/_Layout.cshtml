@@ -23,6 +23,7 @@
                     <li>@Html.ActionLink("Anasayfa", "Index", "Home")</li>
                     <li>@Html.ActionLink("Hakkımızda", "About", "Home")</li>
                     <li>@Html.ActionLink("İletişim", "Contact", "Home")</li>
+                    @Html.Partial("_PartialPageLogin")
                 </ul>
             </div>
         </div>
@@ -32,9 +33,11 @@
         <hr />
         <div>
             MVC de index, about, contact gibi sayfa içerikleri yukardaki RenderBody içerisinde çalıştırılır.
+            @RenderSection("SayfaAdi", required: false)
         </div>
         <footer>
             <p>&copy; @DateTime.Now.Year - ASP.NET Eğitim Projesi</p>
+            @RenderSection("adres", required: false)
         </footer>
     </div>
 

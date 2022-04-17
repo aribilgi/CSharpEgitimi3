@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Section ve Partial Kullanımı";
+}
+
+<h2>Section ve Partial Kullanımı</h2>
+
+<section>
+    Html section Elementi Bölüm
+</section>
+
+<p>
+    layout sayfasındaki scripts isimli section-bölüme aşağıdaki javascript kodu gönderilir
+</p>
+
+@section scripts
+{
+    @*<script>alert('Section kullanımı')</script>*@
+}
+
+@section SayfaAdi{
+    Section ile Bölümler Oluşturma
+}
+
+@section adres{
+    Adres : İstanbul, Pendik, Türkiye
+}
+
+<h2>Partial(Sayfanın Bir Parçası) Kullanımı</h2>
+
+@Html.Partial("_PartialPageLogin")

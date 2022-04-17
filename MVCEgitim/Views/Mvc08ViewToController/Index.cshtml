@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "MVC View dan Controller a veri gönderme";
+}
+
+<h2>MVC View dan Controller a GET Metoduyla veri gönderme</h2>
+
+<div>
+    @using (Html.BeginForm("Index", "Mvc08ViewToController", FormMethod.Get))
+    {
+        @Html.TextBox("txtAra")
+        <input type="submit" value="Ara" />
+    }
+</div>
+
+<p>
+    Get metoduyla formdan butona basılırsa veriler adres çubuğu üzerinden get metoduna QueryString yöntemiyle iletilir. Adres çubuğundaki ?txtAra=monitör kısmındaki txtAra ilgili input un name değeridir, monitör ise bu parametrenin taşıdığı değer.
+</p>
+
+@ViewBag.GetVerisi
