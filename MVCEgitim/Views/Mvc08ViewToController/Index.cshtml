@@ -18,3 +18,51 @@
 </p>
 
 @ViewBag.GetVerisi
+
+@if (Request.QueryString["txtAra"] != null) // Get metodu form içerisindeki verileri QueryString yöntemiyle tarayıcı adres çubuğu üzerinden taşır
+{
+    <h4>Aranan kelime : @Request.QueryString["txtAra"]</h4>
+}
+
+<hr />
+
+<h2>MVC View dan Controller a Post Metodu ile veri gönderme</h2>
+
+@{
+    SelectListItem[] liste = new SelectListItem[3]
+        {
+       new SelectListItem() { Text="Bilgisayar" },
+       new SelectListItem() { Text="Monitör"  },
+       new SelectListItem() { Text="Tablet" }
+                       };
+    <div>
+        @using (Html.BeginForm())
+        {
+            @Html.TextBox("text1") <hr />
+            @Html.DropDownList("liste", liste) <hr />
+            @Html.CheckBox("cbOnay") @("Onaylıyorum") <hr />
+            <input type="submit" value="Gönder" />
+        }
+    </div>
+
+
+    <hr />
+
+    if (IsPost) // Eğer sayfa post edilmişse aşağıdaki kodları işlet
+    {
+        @ViewBag.Mesaj
+        <hr />
+        @ViewData["Vdata"]
+        <hr />
+        @TempData["Tdata"]
+
+        <hr />
+        <h3>2. Yöntem Form Üzerinden</h3>
+
+        @ViewBag.Mesaj2
+        <hr />
+        @ViewData["Vdata2"]
+        <hr />
+        @TempData["Tdata2"]
+    }
+}
