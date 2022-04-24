@@ -12,7 +12,12 @@ namespace MVCEgitim.Controllers
         // GET: Mvc09ModelBinding
         public ActionResult Index()
         {
-            return View();
+            var sayfaModeli = new AnasayfaViewModel // Anasayfada kullanılacak modeli oluşturduk
+            {
+                Adres = new Adres { Id = 25, Sehir = "Erzurum", Ilce = "Ilıca", AcikAdres = "Cami sk. no:18" },
+                Kullanici = new Kullanici { Id = 34, Ad = "Murat", Soyad = "Yılmaz", Email = "nusr@doner.co", KullaniciAdi = "admin", Sifre = "123456" }
+            };
+            return View(sayfaModeli);
         }
         public ActionResult Kullanici()
         {
@@ -38,7 +43,7 @@ namespace MVCEgitim.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Adres(Adres adres) // Get 
+        public ActionResult Adres(Adres adres) // Post 
         {
             ViewBag.Mesaj = "Şehir : " + adres.Sehir; // ön yüze şehir verisi gönderiyoruz
             ViewData["Vdata"] = "İlçe : " + adres.Ilce;// View a ilçe verisi gönderiyoruz

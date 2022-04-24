@@ -1,7 +1,34 @@
-﻿
+﻿@model MVCEgitim.Models.AnasayfaViewModel
+
 @{
     ViewBag.Title = "MVC Model Kullanımı";
 }
 
 <h2>MVC Model Kullanımı</h2>
 
+<h3>Anasayfa View Model</h3>
+<hr />
+
+<h4>Kullanıcı Bilgileri</h4>
+Id : @Model.Kullanici.Id
+<h5>Adı : @Model.Kullanici.Ad</h5>
+<h5>Soyadı : @Model.Kullanici.Soyad</h5>
+<h5>Email : @Model.Kullanici.Email</h5>
+<h5>@Html.LabelFor(model => model.Kullanici.KullaniciAdi) : @Html.DisplayFor(model => model.Kullanici.KullaniciAdi)</h5>
+<h5>Şifre :  @Html.DisplayFor(model => model.Kullanici.Sifre)</h5>
+
+<hr />
+
+<h4>Adres Bilgileri</h4>
+
+<h5>Şehir : @Model.Adres.Sehir</h5>
+<h5>İlçe : @Model.Adres.Ilce</h5>
+<h5>Açık Adres : @Model.Adres.AcikAdres</h5>
+
+<p>
+    Ansayfa view model class ına tanımladığımız 2 class ile artık sayfada 2 sınıfın da nesnelerini kullanabiliyoruz.
+</p>
+
+<p>
+    Sayfa modelindeki nesnelere Model.Adres veya Model.Kullanici şeklinde ulaşıp bu classlarda yer alan propery lere atanan verileri okuyup ekrana yazdırabiliriz.
+</p>
