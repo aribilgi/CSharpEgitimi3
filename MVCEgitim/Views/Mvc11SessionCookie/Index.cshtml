@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Mvc de Session ve Cookie Kullanımı";
+}
+
+<h2>Mvc de Session ve Cookie Kullanımı</h2>
+
+<h3>Session</h3>
+<p>
+    Session sunucu tarafında çalışan ve içerisine her türlü nesneyi alabilen bir yapıdır.
+    <br />
+    Session ın varsayılan yaşam süresi vardır ve bu normalde 20 dakikadır.
+    <br />
+    Sessiondaki veriye session süresi dolmadığı sürece tüm sayfalardan erişebiliriz.
+    <br />
+    Not : bazen session süresi dolmadan serverda oluşacak her hangi bir hatadan dolayı patlayabilir. Bu durumda yeni oturum başlatmak gerekir.
+</p>
+
+
+<h3>Cookie</h3>
+
+<p>
+    Cookie ler istemci tarafında, yani kullanıcının uygulamaya bağlandığı cihazın web tarayıcısında saklanır dolayısıyla kullanıcı adı şifre gibi hassas verilerin burada saklanması tavsiye edilmez!
+    <br />
+    Cookie lerin de yaşam süresi vardır ve bu genelde bizim oluşturacağımız bir süredir.
+    <br />
+    Bu süreyi 15-20 dk, 1 hafta, 1 ay veya kullanıcı tarayıcıyı kapatana kadar yapabiliriz.
+    <br />
+    Cookie deki veriye de uygulamanın tüm sayfalarından ulaşılabilir.
+</p>
+
+
+@using (Html.BeginForm())
+{
+    @Html.TextBox("text", "sess")
+    <button type="submit">Session Oluştur</button>
+}
+
+<hr />
+
+@using (Html.BeginForm("CookieOlustur", "Mvc11SessionCookie"))
+{
+    @Html.TextBox("kuki", "kuki")
+    <button type="submit">Cookie Oluştur</button>
+}

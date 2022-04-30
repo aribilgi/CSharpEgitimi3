@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Sessions";
+}
+
+<h2>Session Kullanımı</h2>
+
+@{
+    if (Session["deger"] != null)
+    {
+        <h3>
+            Sessiondaki Veri : @Session["deger"]
+        </h3>
+        <h3>
+            2. Sessiondaki Veri : @Session["seysin"]
+        </h3>
+    }
+    else
+    {
+        <h3>Session Boş!</h3>
+    }
+}
+
+@if (Session["deger"] != null)
+{
+    using (Html.BeginForm())
+    {
+        <button type="submit">Session Sil</button>
+    }
+}
+

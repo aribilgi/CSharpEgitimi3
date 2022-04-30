@@ -51,5 +51,34 @@ namespace MVCEgitim.Controllers
             }
             return View(uye);
         }
+        public ActionResult UyeListesi()
+        {
+            // Burada veritabanından üye listesi çekilir ve sayfaya gönderilir
+            var uyelistesi = new List<Uye>() {
+                new Uye(){ Id = 18, Ad = "Fatih", Soyad = "Sultan", Email = "fatih@sultan.net", TcKimlikNo = "0000000001453" },
+                new Uye(){ Id = 25, Ad = "Murat", Soyad = "Yılmaz", Email = "murat@yilmaz.co", TcKimlikNo = "0000012345432" },
+                new Uye(){ Id = 34, Ad = "Hamza", Soyad = "Kabulantok", Email = "hamza@kabul.net", TcKimlikNo = "000001253456" }
+            };
+            return View(uyelistesi);
+        }
+        public ActionResult UyeSil()
+        {
+            Uye uye = new Uye()
+            {
+                Id = 18,
+                Ad = "Fatih",
+                Soyad = "Sultan",
+                Email = "fatih@sultan.net",
+                TcKimlikNo = "0001453"
+            };
+            return View(uye); // Ekrana verilerin gelmesi için
+        }
+        [HttpPost]
+        public ActionResult UyeSil(int? id)
+        {
+            // Burada kayıt silme kodları yazılır
+            TempData["mesaj"] = "<div class='alert alert-danger'><h3>Kayıt Silindi!</h3></div>";
+            return View();
+        }
     }
 }
