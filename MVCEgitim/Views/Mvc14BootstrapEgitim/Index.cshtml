@@ -156,3 +156,242 @@
         </div>
     </div>
 </div>
+
+<hr />
+
+
+<h2>
+    Satırdaki Kolon Sayısını Ayarlama
+</h2>
+
+<p>
+    row classına sahip divde kaç kolon gösterileceğini ayarlamak için dive class="row row-cols-3" kodu ekleyerek 1 satırda 3 kolon gösterilmesini sağlayabiliriz.
+    <hr />
+    1 satırda 1 ile 6 arasında vereceğimiz sayı ile kaç kolon gösterileceğini ayarlarız.
+</p>
+
+<div class="row row-cols-3">
+    <div class="col">col 1</div>
+    <div class="col">col 2</div>
+    <div class="col">col 3</div>
+    <div class="col">col 4</div>
+    <div class="col">col 5</div>
+    <div class="col">col 6</div>
+</div>
+
+<hr />
+
+<h2>
+    Columns
+</h2>
+
+<h3>
+    Kolonları Dikeyde Hizalama : align-items-start = üste, align-items-center = ortaya, align-items-end = en alta hizalar.
+</h3>
+
+<div class="row row-cols-3 align-items-start" style="min-height:222px">
+    <div class="col">col 1</div>
+    <div class="col">col 2</div>
+    <div class="col">col 3</div>
+    <div class="col">col 4</div>
+    <div class="col">col 5</div>
+    <div class="col">col 6</div>
+</div>
+
+<hr />
+
+<h2>
+    Yatayda Hizalama
+</h2>
+
+<div class="container">
+    <div class="row justify-content-end">
+        <div class="col-2">col 1</div>
+        <div class="col-2">col 2</div>
+        <div class="col-2">col 3</div>
+    </div>
+</div>
+
+<p>
+    Row elementi içerisinde kolonları başa, ortaya, sona gibi hizalama yapmak için row justify-content- classını sonuna end, center, start.. özellikleri ile kullanabiliriz.
+    <hr />
+    <b>Tüm classlar</b>
+    <br />
+    justify-content-end : sona hizala
+    <br />
+    justify-content-start : başa hizala
+    <br />
+    justify-content-center : orataya hizala
+    <br />
+    justify-content-around : her iki yanda eşit aralıkla hizala
+    <br />
+    justify-content-between : başa sona ve ortaya hizala
+    <br />
+    justify-content-evenly : tüm kolonları tam eşit aralıklarla hizala
+</p>
+
+<div class="row justify-content-between">
+    <div class="col-3">
+        <a href="#"><img src="~/Images/itymrhiu.jpg" width="100" /></a>
+    </div>
+    <div class="col-3">
+        <img src="~/Images/banner-1300-600-px-buz-poset.png" width="100" />
+    </div>
+</div>
+
+<hr />
+
+<h2>
+    Kolonları Sıralama - Order
+</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col">col 1</div>
+        <div class="col order-5">col 2 - order-5</div>
+        <div class="col order-3">col 3 - order-3</div>
+        <div class="col order-1">col 4 - order-1</div>
+        <div class="col">col 4</div>
+    </div>
+</div>
+
+<p>
+    Kolonları sıralamak için order-0 ile order-6 arasında vereceğimiz değerle sıralama yapabiliriz.
+</p>
+
+<hr />
+
+<h2>
+    Offset ile Kolonları İttirme
+</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">col 1</div>
+        <div class="col-md-3 offset-md-2">
+            col 2 bu kolonda offset-md-2 classı ile medium ve üzeri ölçüdeki cihazlarda soldaki kolondan 2 birim kadar sağa doğru ittirme yapılmıştır.
+        </div>
+    </div>
+</div>
+
+<p>
+    offset-md-0 ile offset-md-11 arasında değer girerek kolonu sağa doğru ittirme işlemi yapabilmekteyiz.
+</p>
+
+<hr />
+
+<h2>
+    Bootstrap Margin Kullanarak Hizalama
+</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">col 1 - col-md-4</div>
+        <div class="col-md-4 ms-auto">col 2 - col-md-4 ms-auto bu divi sağa yapıştırır</div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">col 1 - col-md-3</div>
+        <div class="col-md-3 me-auto">
+            col 2 - col-md-3 me-auto margin-right auto ile divi sola hizalar
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<h2>
+    Bootstrap Margin - Padding Kullanımı
+</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col p-5">col 1 - col p-5</div>
+        <div class="col p-3">col 2 - col p-3</div>
+        <div class="col p-1">col 3 - col p-1</div>
+    </div>
+</div>
+
+<p>
+    Bs ta elementlere p-0 ile p-5 classlarıyla padding verilebilir. <hr />
+    p-sm, md,lg .. kullanarak farklı ekran genişlikleri için farklı boşluklar da kullanabiliriz.
+</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col m-5">col 1 - col m-5</div>
+        <div class="col m-3">col 2 - col m-3</div>
+        <div class="col m-1">col 3 - col m-1</div>
+    </div>
+</div>
+
+<p class="ms-5 me-2 pt-3 pb-4">
+    Bs ta elementlere m-0 ile m-5 classlarıyla margin verilebilir.
+    <hr />
+    m-sm, md, lg .. kullanarak farklı ekran genişlikleri için farklı boşluklar da kullanabiliriz.
+    <hr />
+    ms-5 = baştan yani sola margin, me-2 = margin right, pt-3 = padding-top, pb-4 = padding-bottom kodlarıyla tek yönden margin veya padding uygulayabiliriz.
+</p>
+
+<hr />
+
+<h2>
+    Bootstrap Metin Hizalama
+</h2>
+
+<p>
+    Bootstrap ta element içerisindeki metinleri sağa, sola veya merkeze class kullanarak hizalayabiliriz.
+</p>
+
+<div class="text-center">
+    yazıyı ortalamak için  class="text-center" classı kullanılır.
+</div>
+
+<div class="text-end">
+    yazıyı sağa hizalama için  class="text-end" classı kullanılır.
+</div>
+
+<hr />
+
+
+<h2>
+    Bootstrap Responsive Images
+</h2>
+
+<p>
+    Bootstrap ta resimleri de mobil uyumlu hale getirmek için class kullanabilmekteyiz.
+</p>
+
+<h3>Kullanımı</h3>
+
+<div class="row">
+    <div class="col-5">
+        <img src="~/Images/masa.jpg" class="img-fluid" />
+    </div>
+    Resme class="img-fluid" classı vererek resmi responsive hale getirdik.
+</div>
+
+<div class="row">
+    <div class="col-5">
+        <img src="~/Images/masa.jpg" class="img-thumbnail" />
+    </div>
+    Resme class="img-thumbnail" classı vererek boyutlandırdık.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="p-5 m-5"></div>
