@@ -135,8 +135,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Adres.cs" />
     <Compile Include="Models\AnasayfaViewModel.cs" />
+    <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Kullanici.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\UrunDbContext.cs" />
@@ -233,6 +235,7 @@
     <Content Include="Views\Mvc15EFCRUD\Create.cshtml" />
     <Content Include="Views\Mvc15EFCRUD\Edit.cshtml" />
     <Content Include="Views\Mvc15EFCRUD\Details.cshtml" />
+    <Content Include="Views\Mvc15EFCRUD\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

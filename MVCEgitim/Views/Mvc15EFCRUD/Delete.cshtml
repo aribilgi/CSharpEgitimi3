@@ -1,11 +1,12 @@
 ﻿@model MVCEgitim.Models.Product
 
 @{
-    ViewBag.Title = "Ürün Detay";
+    ViewBag.Title = "Sil";
 }
 
-<h2>Ürün Detay</h2>
+<h2>Sil</h2>
 
+<h3>Silmek istediğinize emin misiniz?</h3>
 <div>
     <h4>Ürün Bilgileri</h4>
     <hr />
@@ -35,8 +36,13 @@
         </dd>
 
     </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-danger" /> |
+            @Html.ActionLink("Listeye Dön", "Index")
+        </div>
+    }
 </div>
-<p>
-    @Html.ActionLink("Düzenle", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Listeye Dön", "Index")
-</p>

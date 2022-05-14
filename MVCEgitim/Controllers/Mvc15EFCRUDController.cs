@@ -7,27 +7,37 @@ using System.Web.Mvc;
 
 namespace MVCEgitim.Controllers
 {
-// Mvc de Crud işlemleri yapmak için öncelikle Nuget dan EF 6.4.4 paketini yüklüyoruz
-// Veritabanı bağlantısı için diğer projenin config dosyasından Connection String kodunu kopyalayıp bu projenin web.config dosyasına ekledik.
+    // Mvc de Crud işlemleri yapmak için öncelikle Nuget dan EF 6.4.4 paketini yüklüyoruz
+    // Veritabanı bağlantısı için diğer projenin config dosyasından Connection String kodunu kopyalayıp bu projenin web.config dosyasına ekledik.
     public class Mvc15EFCRUDController : Controller
     {
         UrunDbContext context = new UrunDbContext();
         // GET: Mvc15EFCRUD
-        public ActionResult Index() // Index sayfası veri listeleme için kullanılır
+        public ActionResult Index(string kelime) // Index sayfası veri listeleme için kullanılır
         {
-        // listeleme sayfası için add view dan açılan ekrandan template olarak list i, model class product ı, db context urundbcontext i seçerek oluştururuz.
+            // listeleme sayfası için add view dan açılan ekrandan template olarak list i, model class product ı, db context urundbcontext i seçerek oluştururuz.
+            if (!string.IsNullOrWhiteSpace(kelime)) // Eğer query stringden kelime değeri gelmişse
+            {
+                return View(context.Products.Where(p => p.UrunAdi.Contains(kelime)).ToList()); // context üzerindeki Products ları where ile filtrele ve ürün adlarının içinde kelime den gelen değer geçenleri listele.
+            }
             return View(context.Products.ToList()); // Sayfa ön yüzüne view içerisinde parametre olarak ürün listesini göndermemiz lazım aksi taktirde foreach döngüsünde Nesne başvurusu bir nesnenin örneğine ayarlanmadı. hatası alırız!!!
         }
 
         // GET: Mvc15EFCRUD/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var urun = context.Products.Find(id);
+            if (urun == null)
+            {
+                return HttpNotFound();
+            }
+            return View(urun);
         }
 
         // GET: Mvc15EFCRUD/Create
         public ActionResult Create()
         {
+            ViewBag.CategoryId = new SelectList(context.Categories.ToList(), "Id", "Name");
             return View();
         }
 
@@ -35,17 +45,22 @@ namespace MVCEgitim.Controllers
         [HttpPost]
         public ActionResult Create(Product product)
         {
-            try
+            if (ModelState.IsValid) // Eğer model durumu(doğrulama kuralları) geçerliyse
             {
-                // TODO: Add insert logic here
-                context.Products.Add(product);
-                context.SaveChanges();
-                return RedirectToAction("Index");
+                try
+                {
+                    // TODO: Add insert logic here
+                    context.Products.Add(product);
+                    context.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                catch
+                {
+                    ModelState.AddModelError("", "Hata Oluştu! Kayıt Eklenemedi!"); // Ekrana ilgili mesajı yazdırdık.
+                }
             }
-            catch
-            {
-                return View(product); // Eğer hata oluşursa gelen nesneyi ekrana geri gönder
-            }
+            ViewBag.CategoryId = new SelectList(context.Categories.ToList(), "Id", "Name"); // Post işleminden sonra hata oluşursa kategori bilgilerini tekrar dropdown liste doldurduk yoksa hata alırız!
+            return View(product); // Eğer hata oluşursa gelen nesneyi ekrana geri gönder
         }
 
         // GET: Mvc15EFCRUD/Edit/5
@@ -79,17 +94,18 @@ namespace MVCEgitim.Controllers
         // GET: Mvc15EFCRUD/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            return View(context.Products.Find(id));
         }
 
         // POST: Mvc15EFCRUD/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(int id, Product product)
         {
             try
             {
                 // TODO: Add delete logic here
-
+                context.Entry(product).State = System.Data.Entity.EntityState.Deleted;
+                context.SaveChanges();
                 return RedirectToAction("Index");
             }
             catch
@@ -97,5 +113,6 @@ namespace MVCEgitim.Controllers
                 return View();
             }
         }
+
     }
 }
