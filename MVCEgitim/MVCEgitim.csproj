@@ -231,6 +231,8 @@
     <Content Include="Views\Mvc14BootstrapEgitim\Bootstrap4Listeler.cshtml" />
     <Content Include="Views\Mvc15EFCRUD\Index.cshtml" />
     <Content Include="Views\Mvc15EFCRUD\Create.cshtml" />
+    <Content Include="Views\Mvc15EFCRUD\Edit.cshtml" />
+    <Content Include="Views\Mvc15EFCRUD\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

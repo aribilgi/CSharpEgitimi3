@@ -51,22 +51,28 @@ namespace MVCEgitim.Controllers
         // GET: Mvc15EFCRUD/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var urun = context.Products.Find(id); // Adres çubuğundaki route id den gelen bilgiye göre find metoduyla eşleşen ürünü ara
+            if (urun == null) // Eğer gönderilen id ile eşleşen ürün bulunamadıysa
+            {
+                return HttpNotFound(); // Geriye HttpNotFound ile bulunamadı sayfası döndür
+            }
+            return View(urun); // eğer id ye ait ürün varsa bu ürünü view a gönder
         }
 
         // POST: Mvc15EFCRUD/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, Product product)
         {
             try
             {
                 // TODO: Add update logic here
-
+                context.Entry(product).State = System.Data.Entity.EntityState.Modified; // context üzerinden bize parametreyle gönderilen product ı bul ve o nesnenin durumunu güncellenecek olarak işaretle
+                context.SaveChanges(); // Değişiklikleri kaydet
                 return RedirectToAction("Index");
             }
             catch
             {
-                return View();
+                return View(product); // Eğer güncelleme işleminde bir hata oluşursa parametreden gelen product ı sayfaya geri gönder ki ekrandaki textboxlar boşalmasın.
             }
         }
 
