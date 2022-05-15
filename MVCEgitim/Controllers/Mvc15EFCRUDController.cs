@@ -71,6 +71,7 @@ namespace MVCEgitim.Controllers
             {
                 return HttpNotFound(); // Geriye HttpNotFound ile bulunamadı sayfası döndür
             }
+            ViewBag.CategoryId = new SelectList(context.Categories.ToList(), "Id", "Name", urun.CategoryId); // urun.CategoryId değeri ön yüzdeki dropdown list in seçili değerini ayarlar.
             return View(urun); // eğer id ye ait ürün varsa bu ürünü view a gönder
         }
 
@@ -87,6 +88,7 @@ namespace MVCEgitim.Controllers
             }
             catch
             {
+                ViewBag.CategoryId = new SelectList(context.Categories.ToList(), "Id", "Name", product.CategoryId);
                 return View(product); // Eğer güncelleme işleminde bir hata oluşursa parametreden gelen product ı sayfaya geri gönder ki ekrandaki textboxlar boşalmasın.
             }
         }
